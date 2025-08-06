@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My CAD Journey</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-M9Pv2klt9JcX76plZ3PxT53f6v6PvM4iDe2pK+jOaqoRW1O+PdbVjLDfxmTb8u/BzEfiPYphMLReASu4GDstPQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  
+/>
+  <style>
+    
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f9ff;
+      color: #333;
+    }
+    .intro-section {
+  position: relative;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.intro-section::before {
+  content: "";
+  background-image: url('images/bg.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+
+.intro-section > * {
+  z-index: 1;
+}
+
+    .intro-section h1 {
+      opacity: 0;
+      transform: translateY(-50px);
+      animation: slideDown 2s ease-out forwards;
+    }
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .timeline-entry {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 50px 0;
+    }
+    .timeline-entry .col-md-6 {
+      padding: 20px;
+    }
+    .timeline-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h3 {
+      color: #007BFF;
+    }
+    .carousel-inner img {
+      width: 573px;
+      height: 394px;
+      object-fit: cover;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+    .carousel-caption-custom {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 5px;
+      color: #555;
+      background-color: rgba(255, 255, 255, 0.6);
+      margin-top: 5px;
+      border-radius: 4px;
+    }
+    .section-toggle {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 30px auto;
+      display: block;
+    }
+    .subtitle-large {
+  font-size: 2rem;  /* You can adjust size */
+  font-weight: 600;
+}
+
+.subtitle-small {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.carousel-inner img {
+  object-fit: contain;
+  width: 100%;
+  height: 400px; /* Adjust based on your layout */
+  display: auto;
+  margin: 0 auto;
+}
+.carousel-inner video {
+  object-fit: contain;
+  width: 100%;
+  height: 400px; /* Match the image height */
+  display: block;
+  margin: 0 auto;
+}
+.nav-link-lg {
+  font-size: 1.2rem; /* Adjust size as needed */
+}
+
+header {
+  padding-top: 0.1rem;
+  padding-bottom: 0.3rem;
+}
+.carousel img {
+  width: 608px;
+  height: 436px;
+  object-fit: contain; /* Keeps full image visible */
+  background-color: #B8B8B2; /* Fills empty space */
+  border: 1px solid #B8B8B2; /* Border color */
+  display: block;
+  margin: auto;
+}
+
+  </style>
+</head>
+<body>
+  <header class="bg-light border-bottom shadow-sm fixed-top py-2">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link text-dark fw-bold nav-link-lg" href="#about"> My Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark fw-bold nav-link-lg" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Spacer to prevent intro-section from hiding behind the fixed header -->
+<div style="height: 10px;"></div>
+
+
+  <section class="intro-section" >
+    <h1 class="display-4">HI, I'm Harinarayanan Ks</h1>
+   <p class="subtitle subtitle-large">|Mechanical Designer|</p>
+
+<i class="fa-solid fa-arrow-left"></i>
+  </section>
+
+  <section id="about">
+      <button class="section-toggle btn btn-secondary my-3" type="button" data-bs-toggle="collapse" data-bs-target="#bicycleSection" aria-expanded="false" aria-controls="bicycleSection">
+  SAE Bicycle Design Challenge 2024
+</button>
+
+<div class="container collapse" id="bicycleSection">
+  <div class="timeline-entry row">
+  <!-- Left Column: Images -->
+  <div class="col-md-6">
+    <div id="carouselBicycle" class="carousel slide" data-bs-ride="carousel" data-bs-interval="50" >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/bike1.jpg" class="d-block w-100" alt="Bike Image 1">
+          <div class="carousel-caption-custom">1/8</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bike2.jpg" class="d-block w-100" alt="Bike Image 2">
+          <div class="carousel-caption-custom">2/8</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bike3.jpg" class="d-block w-100" alt="Bike Image 3">
+          <div class="carousel-caption-custom">3/8</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bike4.jpg" class="d-block w-100" alt="Bike Image 4">
+          <div class="carousel-caption-custom">4/8</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bike5.jpg" class="d-block w-100" alt="Bike Image 5">
+          <div class="carousel-caption-custom">5/8</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bike6.jpg" class="d-block w-100" alt="Bike Image 6">
+          <div class="carousel-caption-custom">6/8</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bike7.jpg" class="d-block w-100" alt="Bike Image 7">
+          <div class="carousel-caption-custom">7/8</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/bike8.jpg" class="d-block w-100" alt="Bike Image 8">
+          <div class="carousel-caption-custom">8/8</div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBicycle" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselBicycle" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Right Column: Text + Video -->
+  <div class="timeline-text col-md-6 d-flex flex-column">
+    <h3>Bicycle Design Challenge 2024</h3>
+    <p> The SAEINDIA Bicycle Design Challenge 2024, organized by the SAEINDIA Southern Section, is a national-level competition focused on the design, fabrication, and innovation of bicycles. The competition involves a two-day offline workshop covering product development, vehicle engineering, and component selection.Led the team as Caption and Design Head in the SAE Bicycle Design Challenge 2024, achieving AIR 20/53. From concept sketches to final CAD using Fusion 360, we engineered a human-powered vehicle that blended innovation with performance.</p>
+    
+   <video class="mt-3" style="width: 100%; height:auto;" autoplay muted loop playsinline>
+  <source src="videos/bike.mp4" type="video/mp4">
+  
+</video>
+  </div>
+</div>
+
+</div>
+<!-- SECTION TOGGLE BUTTON: GKDC -->
+<button class="section-toggle btn btn-secondary my-3" type="button" data-bs-toggle="collapse" data-bs-target="#gkdcSection" aria-expanded="false" aria-controls="gkdcSection">
+  GKDC (Go-Kart Design Challenge) 2024
+</button>
+
+
+<!-- COLLAPSIBLE SECTION: GKDC -->
+<div class="container collapse" id="gkdcSection">
+  <div class="timeline-entry row">
+    <!-- Left Column: Carousel -->
+    <div class="col-md-6">
+      <div id="carouselGKDC" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/gkdc1.jpg" class="d-block w-100" alt="GKDC Image 1">
+            <div class="carousel-caption-custom">1/4</div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/gkdc2.jpg" class="d-block w-100" alt="GKDC Image 2">
+            <div class="carousel-caption-custom">2/4</div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/gkdc3.jpg" class="d-block w-100" alt="GKDC Image 3">
+            <div class="carousel-caption-custom">3/4</div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/gkdc4.jpg" class="d-block w-100" alt="GKDC Image 3">
+            <div class="carousel-caption-custom">4/4</div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGKDC" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGKDC" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Column: Text -->
+    <div class="timeline-text col-md-6 d-flex flex-column">
+      <h3>Go-Kart Design Challenge 2024</h3>
+      <p> The Go-Kart Design Challenge (GKDC) 2024, organized by ISNEE Motorsports, is the 11th edition of the competition. It is held at the Kari Motor Speedway in Coimbatore. The GKDC is a design challenge where teams design, build, and race go-karts, showcasing their engineering skills and passion for motorsports. Worked on chassis development, drivetrain integration, and steering system optimization. Participated in GDC 2024 with a complete working prototype.</p>
+      
+      <!-- Optional Video Placeholder -->
+      <video class="mt-3" style="width: 50%; height:auto;" autoplay muted loop playsinline >
+        <source src="videos/gkdc.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- SECTION TOGGLE BUTTON -->
+  <button class="section-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#bajaSection" aria-expanded="false" aria-controls="bajaSection">
+    SAE (H-BAJA) 2025
+  </button>
+
+  <!-- COLLAPSIBLE TIMELINE CONTENT -->
+  <div class="container collapse" id="bajaSection">
+<div class="collapse" id="bajaSection">
+  <div class="card card-body text-center">
+    
+    <!-- Introduction -->
+    <h2> SAE H-BAJA 2025</h2>
+    <p style="max-width: 800px; margin: 0 auto;">
+      BAJA SAEINDIA 2025, the 18th edition, is a student design competition where engineering students design and build all-terrain vehicles (ATVs). The competition emphasizes four key areas: technology, diversity, sustainability, and connectivity. This year's event will feature both physical and virtual rounds, with a focus on sustainable practices like HCNG fuel (Hydrogen-CNG) and autonomous vehicle technologies. 
+    </p>
+
+    <!-- Subtitle -->
+
+    
+    <!-- Your timeline content goes here -->
+    
+  </div>
+</div>
+
+    <!-- JULY -->
+    <div class="timeline-entry">
+      <div class="col-md-6">
+        <div id="carouselJuly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/july1.jpg" class="d-block w-100" alt="July Image 1">
+              <div class="carousel-caption-custom">1/2</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/july2.jpg" class="d-block w-100" alt="July Image 2">
+              <div class="carousel-caption-custom">2/2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-text col-md-6">
+        <h3>July 2025</h3>
+        <p>Brainstormed initial design ideas, created concept sketches, and planned a rough layout of the roll cage for SAE BAJA.</p>
+      </div>
+    </div>
+
+    <!-- AUGUST -->
+    <div class="timeline-entry">
+      <div class="col-md-6">
+        <div id="carouselAugust" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/aug1.jpg" class="d-block w-100" alt="August Image 1">
+              <div class="carousel-caption-custom">1/3</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/aug2.jpg" class="d-block w-100" alt="August Image 2">
+              <div class="carousel-caption-custom">2/3</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/aug3.jpg" class="d-block w-100" alt="August Image 3">
+              <div class="carousel-caption-custom">3/3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-text col-md-6">
+        <h3>August 2025</h3>
+        <p>Studied the SAE BAJA rulebook, analyzed previous designs, and drafted roll cage sketches after team discussions.</p>
+      </div>
+    </div>
+
+    <!-- SEPTEMBER -->
+    <div class="timeline-entry">
+      <div class="col-md-6">
+        <div id="carouselSept" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/sep1.jpg" class="d-block w-100" alt="September Image 1">
+              <div class="carousel-caption-custom">1/6</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/sep2.jpg" class="d-block w-100" alt="September Image 2">
+              <div class="carousel-caption-custom">2/6</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/sep3.jpg" class="d-block w-100" alt="September Image 3">
+              <div class="carousel-caption-custom">3/6</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/sep4.jpg" class="d-block w-100" alt="September Image 4">
+              <div class="carousel-caption-custom">4/6</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/sep5.jpg" class="d-block w-100" alt="September Image 5">
+              <div class="carousel-caption-custom">5/6</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/sep6.jpg" class="d-block w-100" alt="September Image 6">
+              <div class="carousel-caption-custom">6/6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-text col-md-6">
+        <h3>September 2025</h3>
+        <p>Learned weldment tools and built basic 3D CAD models of the roll cage. Explored structural improvements.</p>
+      </div>
+    </div>
+
+    <!-- OCTOBER -->
+    <div class="timeline-entry">
+      <div class="col-md-6">
+        <div id="carouselOct" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/oct1.jpg" class="d-block w-100" alt="October Image 1">
+              <div class="carousel-caption-custom">1/21</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct2.jpg" class="d-block w-100" alt="October Image 2">
+               <div class="carousel-caption-custom">2/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct3.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">3/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct4.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">4/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct5.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">5/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct6.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">6/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct7.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">7/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct8.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">8/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct9.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">9/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct10.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">10/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct11.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">11/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct12.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">12/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct13.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">13/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct14.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">14/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct15.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">15/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct16.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">16/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct17.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">17/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct18.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">18/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct19.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">19/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct20.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">20/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct21.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">21/22</div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/oct22.jpg" class="d-block w-100" alt="October Image 3">
+              <div class="carousel-caption-custom">22/22</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-text col-md-6">
+        <h3>October 2025</h3>
+        <p>Created part files for brackets, arms, tie rods, and mounts. Prepared for CNC and custom manufacturing.</p>
+      </div>
+  </div>
+   <!-- NOVEMBER -->
+<div class="timeline-entry">
+  <div class="col-md-6">
+   <div id="carouselNov" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <!-- Image Slide -->
+        <div class="carousel-item active">
+          <img src="images/nov1.jpg" class="d-block w-100" alt="November Image 1" >
+          <div class="carousel-caption-custom">1/3</div>
+        </div>
+     <!-- Video 1 Slide -->
+        <div class="carousel-item">
+          <video id="video1" class="d-block w-100" style="height: 400px;" autoplay muted playsinline >
+           <source src="videos/nov2.mp4" type="video/mp4">
+          </video>
+          <div class="carousel-caption-custom">2/3</div>
+        </div>
+   
+   <div class="carousel-item">
+          <video id="video2" class="d-block w-100" style="height: 400px;" autoplay muted playsinline >
+            <source src="videos/nov3.mp4" type="video/mp4">
+          </video>
+           <div class="carousel-caption-custom">3/3</div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+   
+
+  <div class="timeline-text col-md-6">
+    <h3>November 2025</h3>
+    <p>Created advanced assemblies including suspension and steering. Simulated motion study. Completed SolidWorks assembly with all designed parts. Checked tolerances and ensured readiness for fabrication.</p>
+  </div>
+</div>
+    <!-- DECEMBER -->
+   <div class="timeline-entry">
+  <div class="col-md-6">
+    <div id="carouselDec" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+      <div class="carousel-inner">
+        <!-- Image 1 -->
+        <div class="carousel-item active">
+          <img src="images/dec1.jpg" class="d-block w-100" alt="December Image 1">
+          <div class="carousel-caption-custom">1/4</div>
+        </div>
+        <!-- Image 2 -->
+        <div class="carousel-item">
+          <img src="images/dec2.jpg" class="d-block w-100" alt="December Image 2">
+          <div class="carousel-caption-custom">2/4</div>
+        </div>
+        <!-- Image 3 -->
+        <div class="carousel-item">
+          <img src="images/dec3.jpg" class="d-block w-100" alt="December Image 3">
+          <div class="carousel-caption-custom">3/4</div>
+        </div>
+        <!-- Video -->
+        <div class="carousel-item">
+          <video id="decVideo" class="d-block w-100"  loop playsinline controls>
+            <source src="videos/dec2.mp4" type="video/mp4">
+          </video>
+          <div class="carousel-caption-custom">4/4</div>
+        </div>
+      </div>
+</div>
+  </div>
+  <div class="timeline-text col-md-6">
+    <h3>December 2025</h3>
+    <p>Our team advanced to the final round and proudly achieved an All India Rank of 11.</p>
+  </div>
+  </div>
+  </section>
+ <footer id="contact" class="bg-dark text-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-3 mb-md-2">
+      © 2025 Harinarayanan KS. All rights reserved.
+    </p>
+    <div class="d-flex justify-content-center gap-4 flex-wrap">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/harinarayanan-ks-626163227/" target="_blank" class="text-light d-flex align-items-center text-decoration-none">
+        <i class="fab fa-linkedin fa-lg me-2"></i>
+        <span>LinkedIn</span>
+      </a>
+      
+      <!-- Gmail -->
+      
+        <i class="fas fa-envelope fa-lg me-2"></i>
+        <span>h4hari.knb@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+  </footer>
+
+
+
+<!-- Script -->
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+      const carouselId = carousel.id;
+      const carouselInstance = new bootstrap.Carousel(carousel, {
+        interval: 1500, 
+        ride: false,
+        pause: true,
+        wrap: false
+      });
+
+      let started = false;
+      let startTimeout;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (!started) {
+              started = true;
+              // Auto-advance first slide for November
+              if (carouselId === 'carouselNov') {
+                startTimeout = setTimeout(() => {
+                  carouselInstance.next();
+                }, 3000);
+              }
+              carouselInstance.cycle();
+            }
+          } else {
+            carouselInstance.pause();
+            started = false;
+            if (startTimeout) clearTimeout(startTimeout);
+
+            // Pause any videos inside the carousel
+            const videos = carousel.querySelectorAll('video');
+            videos.forEach(video => {
+              video.pause();
+              video.currentTime = 0;
+            });
+
+            // Optional: Reset carousel to first slide
+            carouselInstance.to(0);
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      observer.observe(carousel);
+
+      // ✅ Pause carousel on hover, resume on leave
+      carousel.addEventListener('mouseenter', () => {
+        carouselInstance.pause();
+      });
+
+      carousel.addEventListener('mouseleave', () => {
+        carouselInstance.cycle();
+      });
+
+      // 🎥 Play specific videos on slide activation (only for carouselNov)
+      if (carouselId === 'carouselNov') {
+        const video1 = document.getElementById('video1');
+        const video2 = document.getElementById('video2');
+
+        video1?.addEventListener('ended', () => {
+          carouselInstance.next();
+        });
+
+        carousel.addEventListener('slid.bs.carousel', function (e) {
+          if (e.to === 2 && video2) {
+            video2.play();
+          }
+        });
+      }
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', function () {
+  let carousel = document.querySelector('#carouselNov');
+
+  carousel.addEventListener('slid.bs.carousel', function (event) {
+    // Pause all videos
+    document.querySelectorAll('#carouselNov video').forEach(v => v.pause());
+
+    // Play video in active slide
+    let activeVideo = event.relatedTarget.querySelector('video');
+    if (activeVideo) {
+      activeVideo.play().catch(err => console.log("Autoplay blocked:", err));
+    }
+  });
+});
+const carouselDec = document.getElementById('carouselDec');
+  const decVideo = document.getElementById('decVideo');
+
+  carouselDec.addEventListener('slid.bs.carousel', function (event) {
+    if (event.relatedTarget.querySelector('video')) {
+      event.relatedTarget.querySelector('video').play();
+    } else {
+      decVideo.pause();
+      decVideo.currentTime = 0; // Reset to start
+    }
+  });
+  
+
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+     
+  </script>
+  
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.hero h1, .hero p {
+  animation: fadeInDown 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
